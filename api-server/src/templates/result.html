@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .button {
+            background-color: #2799e6;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .center {
+            margin: auto;
+            width: 50%;
+            border: 3px solid rgb(211, 58, 185);
+            padding: 10px;
+        }
+
+        .inner-center {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <div class="inner-center">
+            <h2>Predicted Price</h2>
+            <p style="background-color: antiquewhite;">{{result}}</p>
+            <a href="/" class="button">Go Back</a>
+        </div>
+    </div>
+</body>
+
+</html>
