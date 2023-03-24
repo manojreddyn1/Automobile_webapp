@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import joblib
 import pandas as pd
+import sklearn
 
 app = Flask(__name__)
 
@@ -28,4 +29,13 @@ def prediction():
         prediction = model.predict(df.astype(str))
         prediction = round(prediction[0], 2)
         # return {"prediction": str(prediction)}
-        return render_template("result.html", result=prediction)
+        prediction = max(prediction,0)
+        return render_template("result.html", result=prediction) 
+
+
+# unit test : model loading properly 
+def testing_model(model):
+    assert type(model) == sklearn.pipeline.Pipeline
+
+testing_model(model)
+
